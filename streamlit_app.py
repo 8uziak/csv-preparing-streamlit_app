@@ -28,7 +28,11 @@ streamlit.dataframe(fruityvice_normalized)
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
+
+fruits_choice = streamlit.text_input('What fruit would you like information about?','Banana')
+streamlit.write('The user entered ', fruits_choice)
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruits_choice)
 my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
-streamlit.header("Hello from Snowflake:")
+streamlit.header("wybieraj!!!")
 streamlit.dataframe(my_data_rows)
