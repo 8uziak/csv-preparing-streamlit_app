@@ -31,7 +31,7 @@ my_cur = my_cnx.cursor()
 
 fruits_choice = streamlit.text_input('What fruit would you like information about?','Banana')
 streamlit.write('The user entered ', fruits_choice)
-my_cur.execute("select * from fruit_load_list where FRUIT_NAME=" + f"{fruits_choice}")
+my_cur.execute("select * from fruit_load_list")
 my_data_rows = my_cur.fetchall()
 streamlit.header("wybieraj!!!")
 streamlit.dataframe(my_data_rows)
