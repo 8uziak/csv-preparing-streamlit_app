@@ -55,9 +55,10 @@ df['Date'].unique()
 streamlit.dataframe(df)
 
 streamlit.header("SUMMARY")
-streamlit.markdown("Table after cleaning has 3 columns and 160735 rows \n What I did with the table itself: \n \
-    - I split the columns from the incorrectly saved csv file, \n \
-        - split the probingTimestamp column into 2 other columns and deleted the probingTimestamp column, \n \
-            - I sorted the rows from the smallest values (priority) Date and Time from the smallest value to the highest value, \n \
-               - I fixed the indexing of all rows after sorting. \n \n \
-                 The task solved by Mateusz Buziak - github.com/8uziak")
+streamlit.markdown("Table after cleaning has 3 columns and 160735 rows")
+streamlit.markdown("What I did with the table itself:")
+streamlit.markdown("- I split the columns from the incorrectly saved csv file,")
+streamlit.markdown("- split the probingTimestamp column into 2 other columns and deleted the probingTimestamp column,")
+streamlit.markdown("- I sorted the rows from the smallest values (priority) Date and Time from the smallest value to the highest value,")
+streamlit.markdown("- I fixed the indexing of all rows after sorting.")
+streamlit.markdown("The task solved by Mateusz Buziak - github.com/8uziak")
