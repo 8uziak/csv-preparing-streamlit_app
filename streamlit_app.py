@@ -32,3 +32,43 @@ streamlit.text("the output told me that the cell named 'BCL_TaskCreation' repeat
 streamlit.text("so from the beginning (without header of course) to the last index the cells are the same")
 df['dataStream'].unique()
 streamlit.dataframe(df)
+
+streamlit.text("I decided to remove the 'dataStream' column due to its worthless nature in this table")
+df.drop('dataStream', inplace=True, axis=1)
+streamlit.dataframe(df)
+
+streamlit.text("there is no specific hourly time, from the beginning of the day to the end of the day ")
+df.sort_values(by=['Time'], inplace=True)
+streamlit.dataframe(df)
+
+streamlit.text("I noticed that the data in the table is not sorted in any way")
+streamlit.text("you can see above in the 'Date' column in rows 1, 2 and 3 that the dates are not in sequence")
+streamlit.text("I came to the conclusion to sort the table by cells from the earliest date to the oldest")
+streamlit.text("and from earliest time to latest time")
+df.sort_values(by=['Date','Time'], inplace=True)
+streamlit.dataframe(df)
+
+streamlit.text("I corrected the row names so that the indexing is from zero upwards")
+df.index = range(0,160735) 
+streamlit.dataframe(df)
+
+streamlit.text("I checked that each date has a unique value from the 'rowCount' column and from analyzing")
+streamlit.text("of the following output that the rowCount value is not specified for a particular date")
+df.groupby(['rowCount', 'Date']).size()
+streamlit.dataframe(df)
+
+streamlit.text("the values in the rowCount column are assigned to each day in the closed interval ")
+streamlit.text("from 2020-01-10 to 2020-05-02")
+df['Date'].unique()
+streamlit.dataframe(df)
+
+streamlit.text("SUMMARY")
+streamlit.text("The task solved by Mateusz Buziak - github.com/8uziak")
+streamlit.text("table after cleaning has 3 columns and 160735 rows")
+streamlit.text("What I did with the table itself:")
+streamlit.text("- I split the columns from the incorrectly saved csv file, ")
+streamlit.text("- split the probingTimestamp column into 2 other columns and deleted the probingTimestamp column, ")
+streamlit.text("deleted the dataStream column,")
+streamlit.text("- I sorted the rows from the smallest values (priority) Date and Time from the smallest")
+streamlit.text("value to the highest value, ")
+streamlit.text("- I fixed the indexing of all rows after sorting.")
