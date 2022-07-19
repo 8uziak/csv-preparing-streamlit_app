@@ -8,4 +8,4 @@ What I did with the table itself:
 
 The task solved by Mateusz Buziak - **github.com/8uziak**
 
-Check my app: [streamlit app](https://8uziak-streamlit-app-streamlit-app-10iw8q.streamlitapp.com/) ! :)
+Check my: [streamlit app](https://8uziak-streamlit-app-streamlit-app-10iw8q.streamlitapp.com/) ! :)
