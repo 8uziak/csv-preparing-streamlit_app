@@ -9,4 +9,5 @@ What I did with the table itself:
 The task solved by Mateusz Buziak - **github.com/8uziak**
 
 Check my: [streamlit app](https://8uziak-streamlit-app-streamlit-app-10iw8q.streamlitapp.com/) ! :)
-> sometimes streamlit is sleeping, so you have to wake him up buy clicking blue button "YES, GET THIS APP BACK UP!"
+> sometimes streamlit is sleeping, so you have to wake him up buy clicking blue button 
+> "YES, GET THIS APP BACK UP!"
